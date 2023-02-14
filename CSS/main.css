@@ -1,0 +1,139 @@
+/* Global rules */
+
+@import url('https://fonts.googleapis.com/css?family=Quicksand|Spectral');
+
+html {
+    background-color: rgb(207,205,201);
+    font-family: 'Quicksand', sans-serif;
+    font-size: 0.95em;
+    line-height: 1.5em;
+    background-image: url("../images/background.jpg");
+    background-repeat: repeat;
+    background-size: 2000px 1200px;
+}
+
+body{
+    margin:0; /* removes gap at top of page */
+}
+
+::selection {
+    color: #000; 
+    background: rgb(196, 189, 201);
+}
+
+h1 {
+    font-weight: normal;
+    margin: auto;
+    background: rgb(196, 189, 201);
+    line-height: 2.5em;
+}
+/*
+ The border radius on h1.page-header and main.wrapper provide the 
+ curved corners that appear on the body area of the page
+*/
+h1.page-header{
+    font-family: 'Spectral',serif;
+    -webkit-border-top-left-radius: 5px;
+    -webkit-border-top-right-radius: 5px;
+    -moz-border-radius-topleft: 5px;
+    -moz-border-radius-topright: 5px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+ }
+ 
+
+ main.wrapper {
+    background-color: rgb(199, 188, 207);
+    overflow: auto;
+    -moz-border-radius-bottomleft: 5px;
+    -moz-border-radius-bottomright: 5px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+ }
+ 
+
+p {
+    margin: 1em; /* Top Right Bottom Left (TRBL) */
+}
+
+h2,h3 {
+    font-weight: normal;
+    margin-left: 1em;
+    line-height: 1em;
+}
+
+a {
+    color:rgb(33, 0, 56);
+    text-decoration: none;
+}
+
+a:hover {
+    color: whitesmoke;
+    background-color: rgb(196, 189, 201);
+    text-decoration: none;
+}
+
+footer {
+    clear: both;
+    text-align: center;
+    padding: 1em;
+}
+
+/* Responsive rules */
+
+/* DESKTOP */
+@media all and (min-width:1200px) {
+    main.wrapper {
+        width: 80%;
+        margin: auto;
+    }
+    
+    h1 {
+        width: 79%;
+        padding-left: 1%;
+    }
+    
+    picture.profile img {
+        width: 50%;
+        float: left;
+        margin-right: 2em;
+    }
+    
+}
+
+/* TABLET */
+@media all and (min-width:501px) and (max-width:1199px) {
+    main.wrapper {
+        width: 90%;
+        margin: auto;
+    }
+    
+    h1 {
+        width: 89%;
+        padding-left: 1%;
+    }
+    
+    picture.profile img {
+        width: 50%;
+        float: right;
+        margin-left: 1em;
+    }
+
+}
+
+/* PHONE */
+@media all and (max-width:500px) {
+    main.wrapper {
+        width: 100%;
+    }
+    
+    h1 {
+        width: 99%;
+        padding-left: 1%;
+    }
+    
+    picture.profile img {
+        width: 100%;
+    }
+    
+}
